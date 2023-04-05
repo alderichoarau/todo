@@ -16,7 +16,7 @@
     <description>todo</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <spring-boot.version>2.7.10</spring-boot.version>
         <h2.database.version>2.1.214</h2.database.version>
         <lombok.version>1.18.26</lombok.version>
