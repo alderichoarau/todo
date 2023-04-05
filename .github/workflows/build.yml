@@ -1,4 +1,4 @@
-name: Deploy
+name: Build
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  run-all-tests:
-    runs-on: self-hosted
+  create-artifact:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
