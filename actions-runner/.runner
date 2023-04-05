@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "self-hosted",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c",
+  "gitHubUrl": "https://github.com/alderichoarau/todo",
+  "workFolder": "_work"
+}
