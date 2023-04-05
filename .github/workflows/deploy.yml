@@ -34,15 +34,3 @@ jobs:
         with:
           name: todo
           path: todo-${{ github.sha }}.jar
-
-  fake-deploy:
-    runs-on: self-hosted
-    needs: run-all-tests
-    setps:
-      - name: Get the artifact
-        uses: actions/download-artifact@master
-        with:
-          name: todo
-
-      - name: Fake deploy
-        run: ls todo*.jar
