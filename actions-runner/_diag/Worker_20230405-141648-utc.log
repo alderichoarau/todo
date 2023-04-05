@@ -1,0 +1,1362 @@
+[2023-04-05 14:16:48Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-04-05 14:16:48Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:48Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:48Z INFO HostContext] Well known config file 'Credentials': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.credentials'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:49Z INFO HostContext] Well known config file 'Runner': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.runner'
+[2023-04-05 14:16:49Z INFO Worker] Version: 2.303.0
+[2023-04-05 14:16:49Z INFO Worker] Commit: e676c7871817c1b484299cd93fabdf4b95e70741
+[2023-04-05 14:16:49Z INFO Worker] Culture: fr-FR
+[2023-04-05 14:16:49Z INFO Worker] UI Culture: fr-FR
+[2023-04-05 14:16:49Z INFO Worker] Waiting to receive the job message from the channel.
+[2023-04-05 14:16:49Z INFO ProcessChannel] Receiving message of length 21410, with hash '79cb80ffe19f22dd59007b85b856fc53b62c2dbb022c8aba8ac240f3bfaab8bd'
+[2023-04-05 14:16:49Z INFO Worker] Message received.
+[2023-04-05 14:16:49Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/only-tests.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 12,
+        "col": 17,
+        "lit": "Checkout"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "85f39699-21d7-56fb-0f9a-81135e9d1377",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-java",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 17,
+        "lit": "Setup Java"
+      },
+      "contextName": "__actions_setup-java",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 18,
+        "col": 13,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 13,
+              "lit": "java-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 27,
+              "lit": "17"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 19,
+              "col": 13,
+              "lit": "distribution"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 19,
+              "col": 27,
+              "lit": "adopt"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "c8b6b54f-ba32-53f4-6ba4-7424e60d8e95",
+      "name": "__actions_setup-java"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "stCarolas/setup-maven",
+        "ref": "4.4",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 21,
+        "col": 17,
+        "lit": "Setup Maven"
+      },
+      "contextName": "__stCarolas_setup-maven",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 24,
+        "col": 13,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 24,
+              "col": 13,
+              "lit": "maven-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 24,
+              "col": 28,
+              "lit": "3.8.2"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "4289a2f1-e3c4-5410-c756-1211fb69cf67",
+      "name": "__stCarolas_setup-maven"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 26,
+        "col": 17,
+        "lit": "All the tests and coverage checks"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 16,
+              "lit": "mvn clean install"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "5fe368e2-c379-5541-85ff-15e88d13c428",
+      "name": "__run"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": ""
+    },
+    "system.pipelineStartTime": {
+      "value": "2023-04-05 14:16:46+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "3"
+    },
+    "build.containerId": {
+      "value": "4842103"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/only-tests.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "run-all-tests"
+    },
+    "system.phaseId": {
+      "value": "2db0a556-583d-5c1e-1b8c-44204511546b"
+    },
+    "system.phaseName": {
+      "value": "run-all-tests"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "run-all-tests.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "run-all-tests"
+    },
+    "system.jobDisplayName": {
+      "value": "run-all-tests"
+    },
+    "system.jobId": {
+      "value": "682736c0-47e2-5cdd-32cd-5418af2a1fb6"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 31,
+    "planId": "7a328649-9f38-4473-9e2c-f5598050e867",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/3",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "todo"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "alderichoarau"
+    }
+  },
+  "timeline": {
+    "id": "7a328649-9f38-4473-9e2c-f5598050e867",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "682736c0-47e2-5cdd-32cd-5418af2a1fb6",
+  "jobDisplayName": "run-all-tests",
+  "jobName": "__default",
+  "requestId": 3,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "aaafc64c-89de-4088-a8f1-74fabdba8176",
+          "ServerName": "HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c/",
+          "FeedStreamUrl": "https://pipelines.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/7a328649-9f38-4473-9e2c-f5598050e867/timelines/7a328649-9f38-4473-9e2c-f5598050e867/records/682736c0-47e2-5cdd-32cd-5418af2a1fb6/feedstream?api-version=6.0-preview"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+        },
+        {
+          "k": "repository",
+          "v": "alderichoarau/todo"
+        },
+        {
+          "k": "repository_owner",
+          "v": "alderichoarau"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "27804141"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/alderichoarau/todo.git"
+        },
+        {
+          "k": "run_id",
+          "v": "4619473524"
+        },
+        {
+          "k": "run_number",
+          "v": "3"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repository_id",
+          "v": "623972931"
+        },
+        {
+          "k": "actor_id",
+          "v": "27804141"
+        },
+        {
+          "k": "actor",
+          "v": "alderichoarau"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "alderichoarau"
+        },
+        {
+          "k": "workflow",
+          "v": "Only Tests"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "78169af415af39495c0a6a0d3716bba4a02137ef"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "alhoarau-ext@airfrance.fr"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Hoarau, Alderic (DI NH CA) - AF (ext)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "alhoarau-ext@airfrance.fr"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Hoarau, Alderic (DI NH CA) - AF (ext)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+                        },
+                        {
+                          "k": "message",
+                          "v": "test runner"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-04-05T16:15:24+02:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "cebd4cabb5b60be080a2424604d1bee2d0672a4c"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/alderichoarau/todo/commit/d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/alderichoarau/todo/compare/78169af415af...d9cc10021996"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "alhoarau-ext@airfrance.fr"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Hoarau, Alderic (DI NH CA) - AF (ext)"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "alhoarau-ext@airfrance.fr"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Hoarau, Alderic (DI NH CA) - AF (ext)"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+                    },
+                    {
+                      "k": "message",
+                      "v": "test runner"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2023-04-05T16:15:24+02:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "cebd4cabb5b60be080a2424604d1bee2d0672a4c"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/alderichoarau/todo/commit/d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "alderic.hoarau@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "alderichoarau"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/alderichoarau/todo.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1680701379.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "alderichoarau/todo"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/alderichoarau/todo.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/alderichoarau/todo"
+                    },
+                    {
+                      "k": "id",
+                      "v": 623972931.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "todo"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOJTESQw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/27804141?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "alderic.hoarau@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/alderichoarau/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/alderichoarau/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/alderichoarau/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/alderichoarau/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/alderichoarau"
+                          },
+                          {
+                            "k": "id",
+                            "v": 27804141.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "alderichoarau"
+                          },
+                          {
+                            "k": "name",
+                            "v": "alderichoarau"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjI3ODA0MTQx"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/alderichoarau/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/alderichoarau/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/alderichoarau/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/alderichoarau/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/alderichoarau/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/alderichoarau"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1680704129.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:alderichoarau/todo.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/alderichoarau/todo"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/alderichoarau/todo/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2023-04-05T14:11:42Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/alderichoarau/todo"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/27804141?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/alderichoarau/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/alderichoarau/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/alderichoarau/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/alderichoarau/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/alderichoarau"
+                    },
+                    {
+                      "k": "id",
+                      "v": 27804141.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "alderichoarau"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjI3ODA0MTQx"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/alderichoarau/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/alderichoarau/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/alderichoarau/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/alderichoarau/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/alderichoarau/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/alderichoarau"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "alderichoarau/todo/.github/workflows/only-tests.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "d9cc10021996cf9ec0fd6265a63e82abf5c5446b"
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2023-04-05 14:16:49Z INFO JobRunner] Job ID 682736c0-47e2-5cdd-32cd-5418af2a1fb6
+[2023-04-05 14:16:49Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c/
+[2023-04-05 14:16:49Z INFO ConfigurationStore] currentAssemblyLocation: /Users/alderichoaraupro/Documents/git/todo/actions-runner/bin/Runner.Worker.dll
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO ConfigurationStore] binPath: /Users/alderichoaraupro/Documents/git/todo/actions-runner/bin
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:49Z INFO ConfigurationStore] RootFolder: /Users/alderichoaraupro/Documents/git/todo/actions-runner
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:49Z INFO HostContext] Well known config file 'Runner': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.runner'
+[2023-04-05 14:16:49Z INFO ConfigurationStore] ConfigFilePath: /Users/alderichoaraupro/Documents/git/todo/actions-runner/.runner
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:49Z INFO HostContext] Well known config file 'Credentials': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.credentials'
+[2023-04-05 14:16:49Z INFO ConfigurationStore] CredFilePath: /Users/alderichoaraupro/Documents/git/todo/actions-runner/.credentials
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:49Z INFO HostContext] Well known config file 'MigratedCredentials': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.credentials_migrated'
+[2023-04-05 14:16:49Z INFO ConfigurationStore] MigratedCredFilePath: /Users/alderichoaraupro/Documents/git/todo/actions-runner/.credentials_migrated
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:49Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:49Z INFO HostContext] Well known config file 'Service': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.service'
+[2023-04-05 14:16:49Z INFO ConfigurationStore] ServiceConfigFilePath: /Users/alderichoaraupro/Documents/git/todo/actions-runner/.service
+[2023-04-05 14:16:49Z INFO ConfigurationStore] Read setting file: 286 chars
+[2023-04-05 14:16:49Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-04-05 14:16:49Z INFO Worker] Listening for cancel message from the channel.
+[2023-04-05 14:16:49Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2023-04-05 14:16:49Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-04-05 14:16:49Z INFO JobServer] Creating websocket client ...wss://pipelines.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/7a328649-9f38-4473-9e2c-f5598050e867/timelines/7a328649-9f38-4473-9e2c-f5598050e867/records/682736c0-47e2-5cdd-32cd-5418af2a1fb6/feedstream?api-version=6.0-preview
+[2023-04-05 14:16:50Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Start process web console line queue.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Start process file upload queue.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Start results file upload queue.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-04-05 14:16:50Z INFO JobServerQueue] Start process timeline update queue.
+[2023-04-05 14:16:50Z INFO ExecutionContext] Initialize GitHub context
+[2023-04-05 14:16:50Z INFO ExecutionContext] Initialize Env context
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Diag': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_diag'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Diag': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_diag'
+[2023-04-05 14:16:50Z INFO JobRunner] Starting the job execution context.
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO JobRunner] Validating directory permissions for: '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Tools': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work/_tool'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Temp': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work/_temp'
+[2023-04-05 14:16:50Z INFO JobRunner] Getting job extension.
+[2023-04-05 14:16:50Z INFO JobRunner] Initialize job. Getting all job steps.
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Diag': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_diag'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Diag': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_diag'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known config file 'Credentials': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.credentials'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known config file 'SetupInfo': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/.setup_info'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO PipelineDirectoryManager] Loading tracking config if exists: /Users/alderichoaraupro/Documents/git/todo/actions-runner/_work/_PipelineMapping/alderichoarau/todo/PipelineFolder.json
+[2023-04-05 14:16:50Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO JobExtension] Downloading actions
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Work': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work'
+[2023-04-05 14:16:50Z INFO HostContext] Well known directory 'Actions': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_work/_actions'
+[2023-04-05 14:16:50Z INFO JobServer] Successfully started websocket client.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '70bb8ead-be0f-4142-93a5-89a64e9f0766', success rate: 1/1.
+[2023-04-05 14:16:50Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/HUoEszJwRoj6A8JKVWglfBpepfR7C7qa2kbpEjsZsvNo9CP47c/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/7a328649-9f38-4473-9e2c-f5598050e867/actiondownloadinfo?jobId=682736c0-47e2-5cdd-32cd-5418af2a1fb6 failed. HTTP Status: UnprocessableEntity, AFD Ref: Ref A: 059F5FA1C1BD4041B0D33C30F2D9B0B6 Ref B: PAR02EDGE0715 Ref C: 2023-04-05T14:16:50Z
+[2023-04-05 14:16:50Z ERR  JobExtension] Caught exception from JobExtension Initialization: GitHub.DistributedTask.WebApi.UnresolvableActionDownloadInfoException: Unable to resolve action `stCarolas/setup-maven@4.4`, unable to find version `4.4`
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Worker.ActionManager.GetDownloadInfoAsync(IExecutionContext executionContext, List`1 actions)
+   at GitHub.Runner.Worker.ActionManager.GetDownloadInfoAsync(IExecutionContext executionContext, List`1 actions)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsRecursiveAsync(IExecutionContext executionContext, PrepareActionsState state, IEnumerable`1 actions, Int32 depth, Guid parentStepId)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsAsync(IExecutionContext executionContext, IEnumerable`1 steps, Guid rootStepId)
+   at GitHub.Runner.Worker.JobExtension.InitializeJob(IExecutionContext jobContext, AgentJobRequestMessage message)
+[2023-04-05 14:16:50Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "70bb8ead-be0f-4142-93a5-89a64e9f0766",
+  "result": "failed",
+  "errorMessages": [
+    "Unable to resolve action `stCarolas/setup-maven@4.4`, unable to find version `4.4`"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-04-05T14:16:50.163636Z",
+  "finishTime": "2023-04-05T14:16:50.69487Z"
+}.
+[2023-04-05 14:16:50Z ERR  JobRunner] Job initialize failed.
+[2023-04-05 14:16:50Z ERR  JobRunner] Caught exception from InitializeJob: GitHub.DistributedTask.WebApi.UnresolvableActionDownloadInfoException: Unable to resolve action `stCarolas/setup-maven@4.4`, unable to find version `4.4`
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Worker.ActionManager.GetDownloadInfoAsync(IExecutionContext executionContext, List`1 actions)
+   at GitHub.Runner.Worker.ActionManager.GetDownloadInfoAsync(IExecutionContext executionContext, List`1 actions)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsRecursiveAsync(IExecutionContext executionContext, PrepareActionsState state, IEnumerable`1 actions, Int32 depth, Guid parentStepId)
+   at GitHub.Runner.Worker.ActionManager.PrepareActionsAsync(IExecutionContext executionContext, IEnumerable`1 steps, Guid rootStepId)
+   at GitHub.Runner.Worker.JobExtension.InitializeJob(IExecutionContext jobContext, AgentJobRequestMessage message)
+   at GitHub.Runner.Worker.JobRunner.RunAsync(AgentJobRequestMessage message, CancellationToken jobRequestCancellationToken)
+[2023-04-05 14:16:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '70bb8ead-be0f-4142-93a5-89a64e9f0766', success rate: 1/1.
+[2023-04-05 14:16:50Z INFO JobRunner] Shutting down the job server queue.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2023-04-05 14:16:50Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2023-04-05 14:16:51Z INFO JobServerQueue] All queue process task stopped.
+[2023-04-05 14:16:51Z INFO JobServerQueue] Web console line queue drained.
+[2023-04-05 14:16:51Z INFO JobServerQueue] Uploading 2 files in one shot.
+[2023-04-05 14:16:51Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-04-05 14:16:51Z INFO JobServerQueue] File upload queue drained.
+[2023-04-05 14:16:51Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-04-05 14:16:51Z INFO JobServerQueue] Results upload queue drained.
+[2023-04-05 14:16:51Z INFO JobServerQueue] Timeline update queue drained.
+[2023-04-05 14:16:51Z INFO JobServerQueue] Disposing job server ...
+[2023-04-05 14:16:51Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2023-04-05 14:16:51Z INFO TempDirectoryManager] Cleaning runner temp folder: /Users/alderichoaraupro/Documents/git/todo/actions-runner/_work/_temp
+[2023-04-05 14:16:52Z INFO HostContext] Well known directory 'Bin': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/bin'
+[2023-04-05 14:16:52Z INFO HostContext] Well known directory 'Root': '/Users/alderichoaraupro/Documents/git/todo/actions-runner'
+[2023-04-05 14:16:52Z INFO HostContext] Well known directory 'Diag': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_diag'
+[2023-04-05 14:16:52Z INFO HostContext] Well known config file 'Telemetry': '/Users/alderichoaraupro/Documents/git/todo/actions-runner/_diag/.telemetry'
+[2023-04-05 14:16:52Z INFO JobRunner] Raising job completed event
+[2023-04-05 14:16:52Z INFO Worker] Job completed.
